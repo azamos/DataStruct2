@@ -1,3 +1,4 @@
+/*name: amos zohar, id:311402812*/
 package com.datastruct.ex2;
 
 public class LinkedList {
@@ -111,5 +112,30 @@ public class LinkedList {
 			t2 = t2.next;
 		}
 		return true;
+	}
+	public static void main(String[] args) {
+		String s1="amoszoharisawesomeamoszoharisawesome";//true,false
+		String s2 = "amoszoharisalmostawesome1amoszoharisalmostawesome";//false,false
+		String s3 = "";//true, true
+		String s4 = "A";//false,true
+		String s5 = "AA";//true,true
+		String s6= "AB";//false,false
+		String s7 = "ABA";//false,true
+		String s8 = "ABAB";//true,false
+		String s9 = "ababaababbababaaaababb";//false,false
+		String s10 = "abbabbabbaaaaabbabbabba";//false,true
+		String s11 = "baabaaabbabbabbaabaaabbabbab";//true,false
+		String s12 = "abbabbaabbabba";//true,true
+		String s13 = "amossoma";//false,true
+		String[] stringArray = {s1,s2,s3,s4,s5,s6,s7,s8,s9,s10,s11,s12,s13};
+		for(int i =0;i<stringArray.length;i++) {
+			LinkedList list = LinkedList.generateListFromString(stringArray[i]);
+			System.out.print(i+1);
+			System.out.print(" isWW : ");
+			System.out.print(list.IS_WW());
+			System.out.print(" , is palindrom: ");
+			System.out.print(list.IS_PALINDROM());
+			System.out.println();
+		}
 	}
 }
